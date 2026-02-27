@@ -26,4 +26,9 @@ class Conta {
         this.saldo += valor;
     }
 
+    public double getSaldo()
+    {
+        return this.saldo;
+    }
+
 }

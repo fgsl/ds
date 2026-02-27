@@ -6,6 +6,6 @@ public class ContaTest {
     void verificarSaldoDaConta() {
         Conta conta = new Conta();
         conta.depositar(4500.60);
-        assertEquals(4500.60,conta.saldo);
+        assertEquals(4500.60,conta.getSaldo());
     }
 }
