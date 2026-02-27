@@ -5,7 +5,7 @@ public class ContaTest {
     @Test
     void verificarSaldoDaConta() {
         Conta conta = new Conta();
-        conta.saldo = 4500.60;
+        conta.depositar(4500.60);
         assertEquals(4500.60,conta.saldo);
     }
 }
