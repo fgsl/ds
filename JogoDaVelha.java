@@ -17,13 +17,13 @@ class JogoDaVelha
         // Enquanto não acabou o jogo
         while(!tabuleiro.acabouOJogo())
         {
-            linha = random.nextInt(0,2);
-            coluna = random.nextInt(0,2);
+            linha = random.nextInt(0,3);
+            coluna = random.nextInt(0,3);
     
             tabuleiro.jogar(jogador1.getSimbolo(),linha,coluna);
 
-            linha = random.nextInt(0,2);
-            coluna = random.nextInt(0,2);
+            linha = random.nextInt(0,3);
+            coluna = random.nextInt(0,3);
 
             tabuleiro.jogar(jogador2.getSimbolo(),linha,coluna);
         }

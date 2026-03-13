@@ -57,9 +57,11 @@ class Tabuleiro {
         {
             for(int j=0;j<3;j++)
             {
-                System.out.println(this.casas[i][j]);
+                System.out.print(this.casas[i][j]);
             }
-        }    
+            System.out.println(" ");
+        }
+        System.out.println(" ");    
     }
 
 }
