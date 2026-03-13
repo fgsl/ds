@@ -3,6 +3,7 @@ class Tabuleiro {
 
     public void jogar(char simbolo, int linha, int coluna) {
         this.casas[linha][coluna] = simbolo;
+        this.mostrar();
     }
 
     public boolean acabouOJogo() {
@@ -11,7 +12,7 @@ class Tabuleiro {
     }
 
     public boolean todasAsCasasPreenchidas() {
-        char vazio = ' ';
+        char vazio = 0;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -26,24 +27,24 @@ class Tabuleiro {
     public boolean haUmVencedor() {
         // linhas
         for (int i = 0; i < 3; i++) {
-            if (this.casas[i][0] == this.casas[i][1] &&
+            if (this.casas[i][0]!= 0 && this.casas[i][0] == this.casas[i][1] &&
                     this.casas[i][1] == this.casas[i][2]) {
                 return true;
             }
         }
         // colunas
         for (int i = 0; i < 3; i++) {
-            if (this.casas[0][i] == this.casas[1][i] &&
+            if (this.casas[0][i] != 0 && this.casas[0][i] == this.casas[1][i] &&
                     this.casas[1][i] == this.casas[2][i]) {
                 return true;
             }
         }
         // diagonais
-        if (this.casas[0][0] == this.casas[1][1] &&
+        if (this.casas[0][0] != 0 && this.casas[0][0] == this.casas[1][1] &&
             this.casas[1][1] == this.casas[2][2]) {
             return true;            
         }
-        if (this.casas[0][2] == this.casas[1][1] &&
+        if (this.casas[0][2] !=0 && this.casas[0][2] == this.casas[1][1] &&
             this.casas[1][1] == this.casas[2][0]) {
             return true;
         }
